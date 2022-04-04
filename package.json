@@ -1,6 +1,6 @@
 {
   "name": "react_calcul",
-  "homepage": "https://marcolux.github.io/react_calculator/public/index.html",
+  "homepage": "https://marcolux.github.io/react_calculator/public/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
