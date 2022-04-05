@@ -70,6 +70,7 @@ border-radius: 10px;
   font-size: 25px;
   border-radius: 25px;
   box-shadow: -6px -6px 10px 0px #FFFFFF,6px 6px 10px 0px #BFCDDD,1.5px 1.5px 2px 0px #FFFFFF inset,-1.5px -1.5px 2px 0px #DEF2D0 inset;
+  text-align: center;
 }
 
 .NumerGrid{
@@ -90,6 +91,7 @@ border-radius: 10px;
 border: 0ch;
 color: var(--color1);
 font-size: 25px;
+text-align: center;
 }
 
 .NumberButton0{
@@ -101,6 +103,7 @@ font-size: 25px;
   border: 0ch;
   color: var(--color1);
   font-size: 25px;
+  text-align: center;
 }
 .Operators{
 background: #FFEBF3;
@@ -111,7 +114,7 @@ width: 50px;
 border: 0;
 font-size: 25px;
 color: var(--color1);
-
+text-align: center;
 
 }
 
