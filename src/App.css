@@ -8,6 +8,7 @@
   background: #FFD1EC;
   width: 100vw;
   height: 100vh;
+  --color1:#8B8B8B;
 
 
 }
@@ -53,7 +54,53 @@ background: #EBF3FF;
 box-shadow: inset 6px 6px 5px #BFCDDD, inset -6px -6px 5px #FFFFFF;
 border-radius: 10px;
 }
+.SpecialControlsContainer{
+  width:200px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 37.5px;
+  margin-top: 25px;
+}
+.SpecialControls{
+  height: 50px;
+  width: 50px;
+  border: white;
+  color: var(--color1);
+  font-size: 25px;
+  border-radius: 25px;
+  box-shadow: -6px -6px 10px 0px #FFFFFF,6px 6px 10px 0px #BFCDDD,1.5px 1.5px 2px 0px #FFFFFF inset,-1.5px -1.5px 2px 0px #DEF2D0 inset;
+}
 
+.NumerGrid{
+  width: 225px;
+  height: 295px;
+  margin-left: 25px;
+  margin-top: 15px;
+  /* border: 1px solid black; */
+ 
+}
+.NumberButton{
+background: #EBF3FF;
+box-shadow: 6px 6px 10px #BFCDDD, -6px -6px 10px #FFFFFF, inset -1.5px -1.5px 2px #BFCDDD, inset 1.5px 1.5px 2px #FFFFFF;
+border-radius: 10px;
+height: 50px;
+width: 50px;
+border-radius: 10px;
+border: 0ch;
+color: var(--color1);
+font-size: 25px;
+}
 
+.NumberButton0{
+  height: 50px;
+  width: 123.5px;
+  border-radius: 10px;
+  background: #EBF3FF;
+  box-shadow: 6px 6px 10px #BFCDDD, -6px -6px 10px #FFFFFF, inset -1.5px -1.5px 2px #BFCDDD, inset 1.5px 1.5px 2px #FFFFFF;
+  border: 0ch;
+  color: var(--color1);
+  font-size: 25px;
+}
 
 
