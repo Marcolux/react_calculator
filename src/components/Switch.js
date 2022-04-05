@@ -3,7 +3,7 @@ import { useState, useContext } from "react"
 
 const Switch = ()=>{
 
-    const [backGround, setBackGround] = useState('#9FC5FF')
+    const [backGround, setBackGround] = useState('')
     const [position, setPosition] = useState('flex-start')
 
     
