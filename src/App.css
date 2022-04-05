@@ -34,8 +34,8 @@ box-shadow: inset 3px 3px 5px #BFCDDD, inset -3px -3px 5px #FFFFFF;
 border-radius: 25px;
 display: flex;
 align-items: center;
-justify-content: flex-start;
-transition: .5s;
+/* justify-content: flex-start; */
+transition: 0.5s;
 }
 .SwitchButton{
   height: 30px;
@@ -44,8 +44,8 @@ transition: .5s;
   border: 0.25px solid #FFFFFF;
   box-shadow: 3px 3px 5px 0px #BFCDDD;
   background: #EBF3FF;
-
-
+  transition: .3s;
+  margin-left: 0%;
 }
 
 

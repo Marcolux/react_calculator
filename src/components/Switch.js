@@ -4,20 +4,17 @@ import { useState, useContext } from "react"
 const Switch = ()=>{
 
     const [backGround, setBackGround] = useState('')
-    const [position, setPosition] = useState('flex-start')
+    
 
     
 
     return(
         <div style={{
-            backgroundColor:`${backGround}`,
-            justifyContent:`${position}`
+            backgroundColor:`${backGround}`
              }} className="Switch">
             <SwitchButton 
             backGround={backGround}
             setBackGround={setBackGround}
-            position ={position}
-            setPosition ={setPosition}
             ></SwitchButton>
         </div>
     )
