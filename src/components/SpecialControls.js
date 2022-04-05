@@ -10,7 +10,7 @@ const SpecialControls = ()=>{
 return (
     <div className="SpecialControlsContainer">
         <button style={{color:`${shade}`}} className="SpecialControls">C</button>
-        <button style={{color:`${shade}`}} className="SpecialControls">+/-</button>
+        <button style={{color:`${shade}`}} className="SpecialControls">±</button>
         <button style={{color:`${shade}`}} className="SpecialControls">%</button>
     </div>
 

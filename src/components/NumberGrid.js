@@ -11,9 +11,9 @@ const NumberGrid=()=>{
 
 
     let numbers = {
-        a:[1,2,3],
+        a:[7,8,9],
         b:[4,5,6],
-        c:[7,8,9]
+        c:[1,2,3]
     }
     let bottomNumb = [0,"."]
     return(
