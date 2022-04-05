@@ -43,6 +43,8 @@ transition: .5s;
   border-radius: 25px;
   border: 0.25px solid #FFFFFF;
   box-shadow: 3px 3px 5px 0px #BFCDDD;
+  background: #EBF3FF;
+
 
 }
 
@@ -80,6 +82,8 @@ color: var(--color1);
   justify-content: center;
   align-items: center;
   transition: .2s;
+  background: #F3FFEB;
+
 }
 
 .NumerGrid{
