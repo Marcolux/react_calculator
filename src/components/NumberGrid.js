@@ -27,7 +27,7 @@ const NumberGrid=()=>{
         }
         <tr>
             <th colSpan={2}><button style={{color:`${shade}`}} className="NumberButton0">0</button></th>
-            <th><button  className="NumberButton">.</button></th>
+            <th><button style={{color:`${shade}`}}  className="NumberButton">.</button></th>
         </tr>
     </table>
     )
