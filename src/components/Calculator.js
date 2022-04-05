@@ -4,6 +4,8 @@ import Screen from "./Screen"
 import SpecialControls from "./SpecialControls"
 import Switch from "./Switch"
 
+import { useContext } from "react"
+
 const Calculator = () => {
 
     return (

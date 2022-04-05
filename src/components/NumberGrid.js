@@ -1,6 +1,14 @@
 import SingleRowNumbers from "./SingleRowNumbers"
 
+import { useContext } from "react"
+import { Context } from "../Context/Context"
+
+
 const NumberGrid=()=>{
+
+    const { shadeState } = useContext(Context)
+    const [shade ,setShade] = shadeState
+
 
     let numbers = {
         a:[1,2,3],
@@ -18,7 +26,7 @@ const NumberGrid=()=>{
             })
         }
         <tr>
-            <th colSpan={2}><button className="NumberButton0">0</button></th>
+            <th colSpan={2}><button style={{color:`${shade}`}} className="NumberButton0">0</button></th>
             <th><button  className="NumberButton">.</button></th>
         </tr>
     </table>

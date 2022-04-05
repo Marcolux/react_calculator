@@ -1,12 +1,19 @@
-const Operators = ()=>{
+import { useContext } from "react"
+import { Context } from "../Context/Context"
 
-    let operators = ['÷','x','-','+',"="]
+const Operators = ()=>{
+    const { shadeState } = useContext(Context)
+    const [shade ,setShade] = shadeState
+
+    let x = "\u00D7"
+
+    let operators = ['÷',x,'-','+',"="]
 
 return(
     <div className="OperatorsContainer">
     {operators.map((operat,i)=>{
         return(
-        <button className="Operators" key={i}>{operat}</button>
+        <button style={{color:`${shade}`}} className="Operators" key={i}>{operat}</button>
         )
     })
     }

@@ -1,6 +1,14 @@
+import { useContext } from "react"
+import { Context } from "../Context/Context"
+
+
 const Screen =()=>{
+    const { shadeState } = useContext(Context)
+    const [shade ,setShade] = shadeState
+
+
     return(
-        <div className="Screen">
+        <div style={{color:`${shade}`}} className="Screen">
         </div>
     )
 }
