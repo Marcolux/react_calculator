@@ -44,7 +44,8 @@ transition: .5s;
   border: 0.25px solid #FFFFFF;
   box-shadow: 3px 3px 5px 0px #BFCDDD;
 
-  }
+}
+
 
 .Screen{
   height: 50px;
@@ -78,6 +79,7 @@ color: var(--color1);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .2s;
 }
 
 .NumerGrid{
@@ -101,6 +103,7 @@ font-size: 25px;
 display: flex;
 justify-content: center;
 align-items: center;
+transition: .2s;
 }
 
 .NumberButton0{
@@ -115,7 +118,7 @@ align-items: center;
   text-align: center;
   margin-right: 10px;
   margin-left: -10px;
-
+  transition: .2s;
 }
 .Operators{
 background: #FFEBF3;
@@ -130,6 +133,11 @@ text-align: center;
 display: flex;
 justify-content: center;
 align-items: center;
+transition: .2s;
+}
+
+.NumberButton:active,.Operators:active,.NumberButton0:active,.SpecialControls:active{
+  box-shadow: none;
 }
 
 .OperatorsContainer{
