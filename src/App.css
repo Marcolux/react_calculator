@@ -109,6 +109,9 @@ align-items: center;
   color: var(--color1);
   font-size: 25px;
   text-align: center;
+  margin-right: 10px;
+  margin-left: -10px;
+
 }
 .Operators{
 background: #FFEBF3;
