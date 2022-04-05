@@ -6,11 +6,16 @@ const Provider = ({children})=>{
 
     const [shade ,setShade] = useState('var(--color1)')
     const [count,setCount] = useState(0)
-    const [numberToAdd, setNumberToAdd] = useState(0)
+    const [numberToAdd, setNumberToAdd] = useState([])
+    const [firstNumber, setFirstNumber] = useState([])
+    const [operator, setOperator] = useState()
 
     const state = {
         shadeState:[shade, setShade],
-        countState:[count, setCount]
+        countState:[count, setCount],
+        numberToAddState:[numberToAdd, setNumberToAdd],
+        firstNumberState:[firstNumber, setFirstNumber],
+        operatorState:[operator, setOperator]
 
     }
 
