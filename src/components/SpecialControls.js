@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import App from "../App"
 import { Context } from "../Context/Context"
 
 const SpecialControls = ()=>{
@@ -8,10 +9,15 @@ const SpecialControls = ()=>{
 
     const { numberToAddState } = useContext(Context)
     const [numberToAdd ,setNumberToAdd] = numberToAddState
+    
     const {firstNumberState } = useContext(Context)
     const [firstNumber, setFirstNumber] = firstNumberState
+
     const {countState } = useContext(Context)
     const [count, setCount] = countState
+
+    const { operatorState } = useContext(Context)
+    const [operator ,setOperator] = operatorState
     
 return (
     <div className="SpecialControlsContainer">
@@ -19,7 +25,9 @@ return (
             setNumberToAdd([])
             setFirstNumber([])
             setCount(0)
+            setOperator('')
             console.log(count)
+           
             
             }} style={{color:`${shade}`}} className="SpecialControls">C</button>
         <button
@@ -36,6 +44,7 @@ return (
         className="SpecialControls"
         onClick={()=>{
             numberToAdd<0?setNumberToAdd((numberToAdd*0.01).toFixed(4)):setNumberToAdd((numberToAdd/100).toFixed(4))
+            count<0?setCount((count*0.01).toFixed(4)):setCount((count/100).toFixed(4))
             setFirstNumber([])
         }}
         >%</button>

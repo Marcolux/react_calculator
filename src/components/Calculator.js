@@ -5,8 +5,14 @@ import SpecialControls from "./SpecialControls"
 import Switch from "./Switch"
 
 import { useContext } from "react"
+import { Context } from "../Context/Context"
 
 const Calculator = () => {
+
+    const { operatorState } = useContext(Context)
+    const [operator ,setOperator] = operatorState
+
+    
 
     return (
        <div className="Calculator">

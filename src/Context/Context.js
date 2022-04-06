@@ -8,14 +8,16 @@ const Provider = ({children})=>{
     const [count,setCount] = useState()
     const [numberToAdd, setNumberToAdd] = useState([])
     const [firstNumber, setFirstNumber] = useState([])
-    const [operator, setOperator] = useState()
+    const [operator, setOperator] = useState("")
+    const [finalCount,setFinalCount] = useState([])
 
     const state = {
         shadeState:[shade, setShade],
         countState:[count, setCount],
         numberToAddState:[numberToAdd, setNumberToAdd],
         firstNumberState:[firstNumber, setFirstNumber],
-        operatorState:[operator, setOperator]
+        operatorState:[operator, setOperator],
+        finalCountState:[finalCount,setFinalCount]
 
     }
 

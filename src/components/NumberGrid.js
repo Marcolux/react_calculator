@@ -15,7 +15,15 @@ const NumberGrid=()=>{
     const {firstNumberState } = useContext(Context)
     const [firstNumber, setFirstNumber] = firstNumberState
 
-    
+    const {countState } = useContext(Context)
+    const [count, setCount] = countState
+
+    const { operatorState } = useContext(Context)
+    const [operator ,setOperator] = operatorState
+
+    const {finalCountState } = useContext(Context)
+    const [finalCount, setFinalCount] = finalCountState
+
 
 
     let numbers = {
@@ -24,6 +32,7 @@ const NumberGrid=()=>{
         c:[1,2,3]
     }
 
+
     
 
     const createNumber = (number) =>{
@@ -31,6 +40,11 @@ const NumberGrid=()=>{
         firstNumber.push(number.target.innerText)
 
         setNumberToAdd(Number(firstNumber.join('')))
+        if(operator===""){
+            setCount()
+            setFinalCount([])
+        }
+        
 
     }
 
