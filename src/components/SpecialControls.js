@@ -10,12 +10,17 @@ const SpecialControls = ()=>{
     const [numberToAdd ,setNumberToAdd] = numberToAddState
     const {firstNumberState } = useContext(Context)
     const [firstNumber, setFirstNumber] = firstNumberState
-
+    const {countState } = useContext(Context)
+    const [count, setCount] = countState
+    
 return (
     <div className="SpecialControlsContainer">
         <button onClick={()=>{
             setNumberToAdd([])
             setFirstNumber([])
+            setCount(0)
+            console.log(count)
+            
             }} style={{color:`${shade}`}} className="SpecialControls">C</button>
         <button
         style={{color:`${shade}`}}

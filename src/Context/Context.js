@@ -5,7 +5,7 @@ const Context = createContext()
 const Provider = ({children})=>{
 
     const [shade ,setShade] = useState('var(--color1)')
-    const [count,setCount] = useState(0)
+    const [count,setCount] = useState()
     const [numberToAdd, setNumberToAdd] = useState([])
     const [firstNumber, setFirstNumber] = useState([])
     const [operator, setOperator] = useState()

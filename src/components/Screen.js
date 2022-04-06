@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { Context } from "../Context/Context"
 
 
@@ -9,10 +9,16 @@ const Screen =()=>{
     const { numberToAddState } = useContext(Context)
     const [numberToAdd ,setNumberToAdd] = numberToAddState
 
+    const {countState } = useContext(Context)
+    const [count, setCount] = countState
+
+    const [screenResult, setScreenResult] = useState(0)
+
+    console.log(count)
 
     return(
         <div style={{color:`${shade}`}} className="Screen">
-            <p className="numbersOnTheScreen">{numberToAdd!==0?numberToAdd:0}</p>
+            <p className="numbersOnTheScreen">{count?count:numberToAdd}</p>
         </div>
     )
 }
