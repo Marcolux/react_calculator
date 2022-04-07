@@ -18,6 +18,9 @@ const SpecialControls = ()=>{
 
     const { operatorState } = useContext(Context)
     const [operator ,setOperator] = operatorState
+
+    const {finalCountState } = useContext(Context)
+    const [finalCount, setFinalCount] = finalCountState
     
 return (
     <div className="SpecialControlsContainer">
@@ -43,9 +46,19 @@ return (
         style={{color:`${shade}`}}
         className="SpecialControls"
         onClick={()=>{
-            numberToAdd<0?setNumberToAdd((numberToAdd*0.01).toFixed(4)):setNumberToAdd((numberToAdd/100).toFixed(4))
-            count<0?setCount((count*0.01).toFixed(4)):setCount((count/100).toFixed(4))
-            setFirstNumber([])
+            console.log('nA',numberToAdd,'count',count)
+            // setFinalCount([])
+            if(numberToAdd){
+                numberToAdd<0?setNumberToAdd((numberToAdd*0.01)):setNumberToAdd((numberToAdd/100))
+                setFirstNumber([])
+                setFinalCount([])
+                
+            }
+            else if(count){
+                count<0?setCount((count*0.01)):setCount((count/100))
+                setFirstNumber([])
+                setFinalCount([])
+            }
         }}
         >%</button>
     </div>

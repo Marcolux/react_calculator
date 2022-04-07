@@ -1,5 +1,7 @@
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import { Context } from "../Context/Context"
+import DisplayCount from "./DisplayCount"
+import DisplayNumber from "./DisplayNumber"
 
 
 const Screen =()=>{
@@ -12,13 +14,22 @@ const Screen =()=>{
     const {countState } = useContext(Context)
     const [count, setCount] = countState
 
-    const [screenResult, setScreenResult] = useState(0)
+    // let message = `Number To Big 🙃`
+    const [screenResult, setScreenResult] = useState(`Number To Big 🙃`)
 
-    console.log(count)
+
+    console.log("count",count,String(count).length,"number to add",numberToAdd,String(numberToAdd).length)
+
+    
 
     return(
         <div style={{color:`${shade}`}} className="Screen">
-            <p className="numbersOnTheScreen">{count?count:numberToAdd}</p>
+            {count?
+                    <DisplayCount screenResult={screenResult}></DisplayCount>
+                    :
+                    
+                    <DisplayNumber screenResult={screenResult}></DisplayNumber>
+        }
         </div>
     )
 }

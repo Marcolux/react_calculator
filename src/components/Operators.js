@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import { Context } from "../Context/Context"
 
 const Operators = ()=>{
+
     const { shadeState } = useContext(Context)
     const [shade ,setShade] = shadeState
 
@@ -20,68 +21,51 @@ const Operators = ()=>{
     const {finalCountState } = useContext(Context)
     const [finalCount, setFinalCount] = finalCountState
 
-    
-
     let x = "\u00D7"
 
     let operators = ['÷', x, '-' , '+' ]
 
     
-    let results = 0
-    
-    const equalFunction = ()=>{
-        numberToAdd?finalCount.push(numberToAdd):console.log('nope')
-        // setFinalCount([])
-
-
-        if(operator==='÷'){
-        results = finalCount[0]/finalCount[1]
+    const equalFunctionHelper =()=>{
         finalCount.length=0
         setCount(results)
         setNumberToAdd()
         setOperator("")
-        // finalCount.push(results)
-
+    }
+    
+    let results = 0
+    const equalFunction = ()=>{
+        
+        numberToAdd?finalCount.push(numberToAdd):console.log('nope')
+        
+        if(operator==='÷'){
+            results = finalCount[0]/finalCount[1]
+            equalFunctionHelper()
         }else if(operator===x){
             results = finalCount[0]*finalCount[1]
-            finalCount.length=0
-            setNumberToAdd()
-            setCount(results)
-            setOperator("")
-           
-        }
-        else if(operator==='-'){
+            equalFunctionHelper()
+        }else if(operator==='-'){
             results = finalCount[0]-finalCount[1]
-            finalCount.length=0
-            setCount(results)
-            setNumberToAdd()
-            setOperator("")
-        }
-        else if(operator==='+'){
+            equalFunctionHelper()
+        }else if(operator==='+'){
             results = finalCount[0]+finalCount[1]
-            finalCount.length=0
-            setNumberToAdd()
-            setCount(results)
-            setOperator("")
+            equalFunctionHelper()
         }
-       
-       
+        // results = 0
         operator===""?finalCount.length = 0:finalCount.push(results)
-        results = 0
-        
-        // setNumberToAdd(count)
         console.log("finalCount",finalCount, "final results",results)
     }
     console.log("finalCount",finalCount, "final results",results)
+    
     const operatorSelection= ()=>{
             setCount()
             setFirstNumber([])
+
             if(finalCount.length<2 && numberToAdd!==undefined){
                 finalCount.push(numberToAdd)
             }else if(finalCount.length=2){
                     finalCount.length=1
-            }
-            else if(operator===""){
+            }else if(operator===""){
                 finalCount.shift()
             }
             
@@ -99,8 +83,7 @@ return(
             operatorSelection()
             setOperator(operat)
             console.log(finalCount)
-         }
-
+        }
         }
         >{operat}</button>
         )
@@ -111,10 +94,7 @@ return(
     className="Operators"
     onClick={()=>{
         equalFunction()
-
-    }
-}
-    > = </button>
+    }}> = </button>
     </div>
 
 
