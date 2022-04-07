@@ -60,16 +60,18 @@ const Operators = ()=>{
     const operatorSelection= ()=>{
             setCount()
             setFirstNumber([])
-
+            
             if(finalCount.length<2 && numberToAdd!==undefined){
-                finalCount.push(numberToAdd)
+                setFinalCount([numberToAdd])
             }else if(finalCount.length=2){
-                    finalCount.length=1
+                finalCount.length=1
             }else if(operator===""){
                 finalCount.shift()
             }
-            
-            console.log("finalCount",finalCount)
+            let compareString = Array.from(String(finalCount[1])).filter(element=>element!=='.')
+            let compareString2 = Array.from(String(count)).filter(element=>element!=='.')
+
+            console.log(compareString2,"figuring out",compareString,compareString===compareString2)
     }
 return(
     <div className="OperatorsContainer">

@@ -27,7 +27,6 @@ const Screen =()=>{
             {count?
                     <DisplayCount screenResult={screenResult}></DisplayCount>
                     :
-                    
                     <DisplayNumber screenResult={screenResult}></DisplayNumber>
         }
         </div>

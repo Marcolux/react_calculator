@@ -9,8 +9,7 @@ import { Context } from "../Context/Context"
 
 const Calculator = () => {
 
-    const { operatorState } = useContext(Context)
-    const [operator ,setOperator] = operatorState
+    
 
     
 

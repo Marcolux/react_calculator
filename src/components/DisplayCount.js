@@ -18,7 +18,7 @@ const DisplayCount = (props)=>{
     return(
         <>
                     {
-                    count<9999999999?
+                    count<99999999?
                         <p className="numbersOnTheScreen">{count.toFixed(2)}</p>
                         :
                         <>

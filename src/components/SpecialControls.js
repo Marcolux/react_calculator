@@ -46,18 +46,25 @@ return (
         style={{color:`${shade}`}}
         className="SpecialControls"
         onClick={()=>{
-            console.log('nA',numberToAdd,'count',count)
-            // setFinalCount([])
+            finalCount.shift()
+            let newNumber 
             if(numberToAdd){
-                numberToAdd<0?setNumberToAdd((numberToAdd*0.01)):setNumberToAdd((numberToAdd/100))
+                if(numberToAdd<0){
+                   newNumber=numberToAdd*0.01
+                }else{newNumber=numberToAdd/100}
+                setNumberToAdd(newNumber)
                 setFirstNumber([])
-                setFinalCount([])
+                setFinalCount([newNumber])
+                console.log('nA',numberToAdd,'count',count)
                 
             }
             else if(count){
-                count<0?setCount((count*0.01)):setCount((count/100))
+                if(count<0){newNumber=count*0.01}
+                else{newNumber=count/100}
                 setFirstNumber([])
-                setFinalCount([])
+                setCount(newNumber)
+                setFinalCount([newNumber])
+                console.log('nA',numberToAdd,'count',count)
             }
         }}
         >%</button>
