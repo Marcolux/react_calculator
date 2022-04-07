@@ -9,7 +9,7 @@
   width: 100vw;
   height: 100vh;
   --color1:#8B8B8B;
-  --color2:black;
+  --color2:#303030;
 
 }
 
@@ -82,12 +82,12 @@ color: #8B8B8B;
   margin-top: 25px;
   margin-left: 37.5px;
   border-radius: 10px;
-background: #EBF3FF;
-box-shadow: inset 6px 6px 5px #BFCDDD, inset -6px -6px 5px #FFFFFF;
-border-radius: 10px;
-color: var(--color1);
-text-align: center;
-text-justify: center;
+  background: #EBF3FF;
+  box-shadow: inset 6px 6px 5px #BFCDDD, inset -6px -6px 5px #FFFFFF;
+  border-radius: 10px;
+  color: var(--color1);
+  text-align: center;
+  text-justify: center;
 
 }
 

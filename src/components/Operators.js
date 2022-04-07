@@ -31,6 +31,7 @@ const Operators = ()=>{
         setCount(results)
         setNumberToAdd()
         setOperator("")
+        setFirstNumber([])
     }
     
     let results = 0

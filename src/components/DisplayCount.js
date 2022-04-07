@@ -14,15 +14,23 @@ const DisplayCount = (props)=>{
     const {firstNumberState } = useContext(Context)
     const [firstNumber, setFirstNumber] = firstNumberState
 
-
+    console.log("array",Array.from(String(Number(count))).includes("."))
     return(
         <>
                     {
                     count<99999999?
-                        <p className="numbersOnTheScreen">{count.toFixed(2)}</p>
+                        <>    
+                            {
+                            Array.from(String(Number(count))).includes(".")?
+                            
+                                <p className="numbersOnTheScreen">{count.toFixed(2)}</p>
+                                :
+                                <p className="numbersOnTheScreen">{count}</p>
+                            }
+                        </>
                         :
                         <>
-                        <p style={{fontSize:'30px'}} className="numbersOnTheScreen">{props.screenResult}</p>
+                            <p style={{fontSize:'30px'}} className="numbersOnTheScreen">{props.screenResult}</p>
                         </>
                     }
                     </>

@@ -37,7 +37,9 @@ const NumberGrid=()=>{
 
     const createNumber = (number) =>{
 
+        firstNumber.length<11 ? 
         firstNumber.push(number.target.innerText)
+        : firstNumber.length = 11
 
         setNumberToAdd(Number(firstNumber.join('')))
         if(operator===""){
@@ -45,7 +47,7 @@ const NumberGrid=()=>{
             setFinalCount([])
         }
         
-
+        console.log("first Number",firstNumber.length,"number to add", numberToAdd )
     }
 
     return(
