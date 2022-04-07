@@ -9,23 +9,19 @@ const DisplayNumber =(props)=>{
 
     return( 
         
-            numberToAdd?
-            <>
-                {numberToAdd<9999999999?
-                <p className="numbersOnTheScreen">{numberToAdd}</p>
-                :
-                <>
-                <p style={{fontSize:'30px'}} className="numbersOnTheScreen">{props.screenResult}</p>
-                </>
-                }
-            </>
+        numberToAdd?
+        <>
+            {numberToAdd<9999999999?
+            <p className="numbersOnTheScreen">{numberToAdd}</p>
             :
-            
-            <p className="numbersOnTheScreen">{0}</p>
-            
+            <>
+            <p style={{fontSize:'30px'}} className="numbersOnTheScreen">{props.screenResult}</p>
+            </>
+            }
+        </>
+        :
         
-        
-
+        <p className="numbersOnTheScreen">{0}</p>
     )
 }
 

@@ -1,5 +1,4 @@
 import { useContext } from "react"
-import App from "../App"
 import { Context } from "../Context/Context"
 
 const SpecialControls = ()=>{
@@ -52,10 +51,9 @@ return (
                 if(numberToAdd<0){
                    newNumber=numberToAdd*0.01
                 }else{newNumber=numberToAdd/100}
-                setNumberToAdd(newNumber)
                 setFirstNumber([])
+                setNumberToAdd(newNumber)
                 setFinalCount([newNumber])
-                console.log('nA',numberToAdd,'count',count)
                 
             }
             else if(count){
@@ -64,7 +62,6 @@ return (
                 setFirstNumber([])
                 setCount(newNumber)
                 setFinalCount([newNumber])
-                console.log('nA',numberToAdd,'count',count)
             }
         }}
         >%</button>

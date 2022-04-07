@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext} from "react"
 import { Context } from "../Context/Context"
 
 const Operators = ()=>{
@@ -52,27 +52,22 @@ const Operators = ()=>{
             results = finalCount[0]+finalCount[1]
             equalFunctionHelper()
         }
-        // results = 0
         operator===""?finalCount.length = 0:finalCount.push(results)
-        console.log("finalCount",finalCount, "final results",results)
     }
-    console.log("finalCount",finalCount, "final results",results)
     
     const operatorSelection= ()=>{
-            setCount()
-            setFirstNumber([])
-            
-            if(finalCount.length<2 && numberToAdd!==undefined){
-                setFinalCount([numberToAdd])
-            }else if(finalCount.length=2){
-                finalCount.length=1
-            }else if(operator===""){
-                finalCount.shift()
-            }
-            let compareString = Array.from(String(finalCount[1])).filter(element=>element!=='.')
-            let compareString2 = Array.from(String(count)).filter(element=>element!=='.')
-
-            console.log(compareString2,"figuring out",compareString,compareString===compareString2)
+        setCount()
+        setFirstNumber([])
+        
+        if(finalCount.length<2 && numberToAdd!==undefined){
+            setFinalCount([numberToAdd])
+        }
+        // else if(finalCount.length===2){
+        //     finalCount.length=1
+        // }
+        else if(operator===""){
+            finalCount.shift()
+        }
     }
 return(
     <div className="OperatorsContainer">

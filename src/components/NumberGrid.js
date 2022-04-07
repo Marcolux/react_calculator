@@ -46,8 +46,6 @@ const NumberGrid=()=>{
             setCount()
             setFinalCount([])
         }
-        
-        console.log("first Number",firstNumber.length,"number to add", numberToAdd )
     }
 
     return(

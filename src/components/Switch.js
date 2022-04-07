@@ -14,13 +14,8 @@ const Switch = ()=>{
 
     return(
         <div className="switch_enanched">
-        <div style={{
-            backgroundColor:`${backGround}`
-        }} className="Switch">
-            <SwitchButton 
-            backGround={backGround}
-            setBackGround={setBackGround}
-            ></SwitchButton>
+        <div style={{backgroundColor:`${backGround}`}} className="Switch">
+            <SwitchButton backGround={backGround}setBackGround={setBackGround}></SwitchButton>
         </div>
             <p style={{color:`${shade}`}} className="enanched">{'Contrast Enhanced'}</p>
         </div>
