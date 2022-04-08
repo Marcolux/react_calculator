@@ -1,4 +1,4 @@
-import { useContext} from "react"
+import { useContext, useEffect} from "react"
 import { Context } from "../Context/Context"
 
 
@@ -8,7 +8,17 @@ const DisplayCount = (props)=>{
     const {countState } = useContext(Context)
     const [count, setCount] = countState
 
-    console.log("array",Array.from(String(Number(count))).includes("."))
+    let newCount
+    const checkForDot=()=>{
+        let dotInCount = Array.from(String(Number(count))).includes(".")
+        let doubleZero = String(Number(count)).split(".")[1]
+        console.log(doubleZero)
+        
+        // if(dotInCount){}
+    }
+
+    // useEffect(checkForDot,[])
+
     return(
         <>
             {
@@ -16,7 +26,6 @@ const DisplayCount = (props)=>{
                 <>    
                     {
                     Array.from(String(Number(count))).includes(".")?
-                    
                         <p className="numbersOnTheScreen">{count.toFixed(2)}</p>
                         :
                         <p className="numbersOnTheScreen">{count}</p>

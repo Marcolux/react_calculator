@@ -36,7 +36,8 @@ return (
         style={{color:`${shade}`}}
         className="SpecialControls"
         onClick={()=>{
-            setNumberToAdd((Number(firstNumber.join(''))*(-1)))
+
+            count?setCount((Number(count)*(-1))):setNumberToAdd((Number(firstNumber.join(''))*(-1)))
             firstNumber.includes('-')?firstNumber.shift():firstNumber.unshift('-')
            
         }}
@@ -49,8 +50,8 @@ return (
             let newNumber 
             if(numberToAdd){
                 if(numberToAdd<0){
-                   newNumber=numberToAdd*0.01
-                }else{newNumber=numberToAdd/100}
+                   newNumber=Number(numberToAdd*0.01)
+                }else{newNumber=Number(numberToAdd/100)}
                 setFirstNumber([])
                 setNumberToAdd(newNumber)
                 setFinalCount([newNumber])

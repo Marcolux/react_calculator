@@ -6,22 +6,23 @@ const DisplayNumber =(props)=>{
     const { numberToAddState } = useContext(Context)
     const [numberToAdd ,setNumberToAdd] = numberToAddState
 
-
+console.log("number to add", numberToAdd)
     return( 
-        
-        numberToAdd?
         <>
-            {numberToAdd<9999999999?
-            <p className="numbersOnTheScreen">{numberToAdd}</p>
-            :
+            {numberToAdd?
             <>
-            <p style={{fontSize:'30px'}} className="numbersOnTheScreen">{props.screenResult}</p>
+                {numberToAdd<9999999999?
+                    <p className="numbersOnTheScreen">{numberToAdd}</p>
+                    :
+                    <p style={{fontSize:'30px'}} className="numbersOnTheScreen">{props.screenResult}</p>
+                }
             </>
+            :
+            <p className="numbersOnTheScreen">{"0"}</p>
             }
         </>
-        :
         
-        <p className="numbersOnTheScreen">{0}</p>
+
     )
 }
 

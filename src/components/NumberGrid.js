@@ -37,37 +37,50 @@ const NumberGrid=()=>{
 
     const createNumber = (number) =>{
 
-        firstNumber.length<11 ? 
-        firstNumber.push(number.target.innerText)
-        : firstNumber.length = 11
+        firstNumber.length<11 ? firstNumber.push(number.target.innerText):firstNumber.length = 11
 
-        setNumberToAdd(Number(firstNumber.join('')))
+        setNumberToAdd(firstNumber.join(''))
         if(operator===""){
             setCount()
             setFinalCount([])
         }
     }
-
+    console.log(firstNumber)
     return(
     <table className="NumerGrid">
+        <tbody>
+
         {
             Object.values(numbers).map((numb,k)=>{
                 return(
-                <SingleRowNumbers 
-                key={k} 
-                numb={numb}
-                createNumber={createNumber}
-
-                ></SingleRowNumbers>
-                )
-            })
-        }
-        <tr>
-            <th colSpan={2}><button onClick={createNumber} style={{color:`${shade}`}} className="NumberButton0">0</button></th>
-            <th><button onClick={(e)=>{
-                firstNumber.includes(".")?alert('already in'):createNumber(e)
-            }} style={{color:`${shade}`}}  className="NumberButton">.</button></th>
-        </tr>
+                    <SingleRowNumbers 
+                    key={k} 
+                    numb={numb}
+                    createNumber={createNumber}
+                    
+                    ></SingleRowNumbers>
+                    )
+                })
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colSpan={2}>
+                    <button
+                    onClick={(e)=>{
+                        createNumber(e)
+                    console.log(e)
+                    }}
+                    style={{color:`${shade}`}}
+                    className="NumberButton0">0</button>
+                </th>
+                <th>
+                    <button onClick={(e)=>{
+                        firstNumber.includes(".")?alert('already in'):createNumber(e)
+                    }} style={{color:`${shade}`}}  className="NumberButton">.</button>
+                </th>
+            </tr>
+        </tfoot>
     </table>
     )
 }
