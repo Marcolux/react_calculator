@@ -44,10 +44,12 @@ const NumberGrid=()=>{
             setCount()
             setFinalCount([])
         }
+        
+        console.log(firstNumber.indexOf('.'))
     }
-    console.log(firstNumber)
+   
     return(
-    <table className="NumerGrid">
+        <table className="NumerGrid">
         <tbody>
 
         {
@@ -62,25 +64,27 @@ const NumberGrid=()=>{
                     )
                 })
             }
-        </tbody>
-        <tfoot>
+        
             <tr>
                 <th colSpan={2}>
                     <button
                     onClick={(e)=>{
                         createNumber(e)
-                    console.log(e)
+                        console.log(e)
                     }}
                     style={{color:`${shade}`}}
                     className="NumberButton0">0</button>
                 </th>
                 <th>
                     <button onClick={(e)=>{
-                        firstNumber.includes(".")?alert('already in'):createNumber(e)
+                    if(!firstNumber.includes(".")){createNumber(e)}
+                    if(firstNumber.indexOf(".")===0){
+                        firstNumber.unshift('0')}
                     }} style={{color:`${shade}`}}  className="NumberButton">.</button>
                 </th>
             </tr>
-        </tfoot>
+        </tbody>
+        
     </table>
     )
 }

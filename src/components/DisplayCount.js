@@ -8,25 +8,32 @@ const DisplayCount = (props)=>{
     const {countState } = useContext(Context)
     const [count, setCount] = countState
 
-    let newCount
+    let newCount 
     const checkForDot=()=>{
         let dotInCount = Array.from(String(Number(count))).includes(".")
         let doubleZero = String(Number(count)).split(".")[1]
-        console.log(doubleZero)
+       
         
-        // if(dotInCount){}
+        if(dotInCount){
+            if(doubleZero===0){
+                setCount(count)
+            }else if(doubleZero>0){
+                newCount = count.toFixed(2)
+                setCount(newCount)
+            }
+        }
     }
 
-    // useEffect(checkForDot,[])
-
+    useEffect(checkForDot,[])
+    
     return(
         <>
             {
             count<99999999?
                 <>    
                     {
-                    Array.from(String(Number(count))).includes(".")?
-                        <p className="numbersOnTheScreen">{count.toFixed(2)}</p>
+                    newCount?
+                        <p className="numbersOnTheScreen">{newCount}</p>
                         :
                         <p className="numbersOnTheScreen">{count}</p>
                     }

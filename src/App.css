@@ -19,7 +19,7 @@
   border-radius: 25px;
   background: #EBF3FF;
   box-shadow: 9px 9px 10px 0px #00000040,3.1718568801879883px 3.1718568801879883px 6.343713760375977px 0px #FFFFFF inset,-3.1718568801879883px -3.1718568801879883px 6.343713760375977px 0px #BFCDDD inset;
- 
+ padding: 0px;
 }
 
 /* Rectangle 2 */
@@ -78,7 +78,7 @@ color: #8B8B8B;
 
 .Screen{
   height: 50px;
-  width: 275px;
+  width: 268px;
   margin-top: 25px;
   margin-left: 37.5px;
   border-radius: 10px;
@@ -88,18 +88,19 @@ color: #8B8B8B;
   color: var(--color1);
   text-align: center;
   text-justify: center;
-  padding: 1px;
+  padding-left: 0px; 
+  padding-right: 8px;
 }
 
 .numbersOnTheScreen{
   font-family: Helvetica;
-  font-size: 47px;
+  font-size: 45px;
   font-weight: 400;
   line-height: 50px;
   text-align: right;
   text-justify: center;
   padding: 0;
-  margin: 0%;
+  margin: 0px;
   height: 50px;
 }
 .numbersOnTheScreenText{
@@ -114,13 +115,15 @@ color: #8B8B8B;
   display: flexbox;
   justify-content: center;
 }
+
 .SpecialControlsContainer{
   width:200px;
   height: 50px;
   display: flex;
   justify-content: space-between;
-  margin-left: 37.5px;
+  margin-left: 40.5px;
   margin-top: 25px;
+  padding: 0px;
 }
 .SpecialControls{
   height: 50px;
@@ -136,13 +139,17 @@ color: #8B8B8B;
   align-items: center;
   transition: .2s;
   background: #F3FFEB;
+  margin-left: 3px;
+  margin-right: 5px;
+  
 
 }
 
 .NumerGrid{
-  width: 210px;
-  height: 295px;
-  margin-left: 37px;
+  width: 200px;
+  height: 275px;
+  margin-left: 40.5px;
+  margin-right: 109.5px;
   margin-top: 15px;
   /* border: 1px solid black; */
  
@@ -161,6 +168,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 transition: .2s;
+margin: 0px;
 }
 
 .NumberButton0{
@@ -172,11 +180,13 @@ transition: .2s;
   border: 0ch;
   color: var(--color1);
   font-size: 25px;
-  text-align: center;
+  text-align: left;
   margin-right: 10px;
-  margin-left: -10px;
+  margin-left: -4px;
   transition: .2s;
+  padding-left: 17px ;
 }
+
 .Operators{
 background: #FFEBF3;
 box-shadow: 6px 6px 10px #BFCDDD, -6px -6px 10px #FFFFFF, inset -1.5px -1.5px 2px #F9DAE6, inset 1.5px 1.5px 2px #FFFFFF;
@@ -187,10 +197,13 @@ border: 0;
 font-size: 25px;
 color: var(--color1);
 text-align: center;
-display: flex;
-justify-content: center;
+display:flexbox;
+justify-items: center;
 align-items: center;
 transition: .2s;
+padding:0px;
+
+
 }
 
 .NumberButton:active,.Operators:active,.NumberButton0:active,.SpecialControls:active{
@@ -200,12 +213,15 @@ transition: .2s;
 .OperatorsContainer{
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 330px;
   width: 50px;
   position: absolute;
-  margin-left: 265px;
+  margin-left: 262.5px;
   margin-top: 25px;
   justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 0px;
 }
 
 
