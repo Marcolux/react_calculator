@@ -52,10 +52,16 @@ return (
         onClick={()=>{
             finalCount.shift()
             let newNumber 
+            let arr
             if(numberToAdd){
                 if(numberToAdd<0){
                    newNumber=Number(numberToAdd*0.01)
                 }else{newNumber=Number(numberToAdd/100)}
+                if(Array.from(String(newNumber)).length > 11){
+                    arr = Array.from(String(newNumber))
+                    arr.length = 10
+                    newNumber = arr.join("")
+                } 
                 setFirstNumber([])
                 setNumberToAdd(newNumber)
                 setFinalCount([newNumber])
@@ -64,6 +70,11 @@ return (
             else if(count){
                 if(count<0){newNumber=count*0.01}
                 else{newNumber=count/100}
+                if(Array.from(String(newNumber)).length > 11){
+                    arr = Array.from(String(newNumber))
+                    arr.length = 10
+                    newNumber = arr.join("")
+                } 
                 setFirstNumber([])
                 setCount(newNumber)
                 setFinalCount([newNumber])

@@ -21,7 +21,13 @@ const DisplayCount = (props)=>{
                 if(Array.from(String(Number(count))).length<11){
                     newCount = count
                 }else{
-                    newCount = count.toFixed(2)
+                    let arr = Array.from(String(Number(count)))
+                    if(arr.length <11){
+                        newCount = count
+                    }else if(arr.length>=11){
+                        arr.length = 11
+                        newCount = arr.join("")
+                    }
                 }
                 setCount(newCount)
             }
