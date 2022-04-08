@@ -14,11 +14,11 @@ console.log("number to add", numberToAdd)
                 {numberToAdd<9999999999?
                     <p className="numbersOnTheScreen">{numberToAdd}</p>
                     :
-                    <p style={{fontSize:'30px'}} className="numbersOnTheScreen">{props.screenResult}</p>
+                    <p style={{fontSize:'23px'}} className="numbersOnTheScreenText">{props.screenResult}</p>
                 }
             </>
             :
-            <p className="numbersOnTheScreen">{"0"}</p>
+            <p className="numbersOnTheScreen">{0}</p>
             }
         </>
         

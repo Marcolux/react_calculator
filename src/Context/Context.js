@@ -10,6 +10,7 @@ const Provider = ({children})=>{
     const [firstNumber, setFirstNumber] = useState([])
     const [operator, setOperator] = useState("")
     const [finalCount,setFinalCount] = useState([])
+    const [initialCondition, setInitialCondition] = useState(false)
 
     const state = {
         shadeState:[shade, setShade],
@@ -17,7 +18,8 @@ const Provider = ({children})=>{
         numberToAddState:[numberToAdd, setNumberToAdd],
         firstNumberState:[firstNumber, setFirstNumber],
         operatorState:[operator, setOperator],
-        finalCountState:[finalCount,setFinalCount]
+        finalCountState:[finalCount,setFinalCount],
+        initialConditionState:[initialCondition, setInitialCondition]
 
     }
 

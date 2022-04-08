@@ -20,14 +20,18 @@ const SpecialControls = ()=>{
 
     const {finalCountState } = useContext(Context)
     const [finalCount, setFinalCount] = finalCountState
+
+    const {initialConditionState } = useContext(Context)
+    const [initialCondition, setInitialCondition] = initialConditionState
     
 return (
     <div className="SpecialControlsContainer">
         <button onClick={()=>{
             setNumberToAdd([])
             setFirstNumber([])
-            setCount(0)
+            setCount()
             setOperator('')
+            setInitialCondition(false)
             console.log(count)
            
             

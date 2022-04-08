@@ -33,7 +33,7 @@ const DisplayCount = (props)=>{
                 </>
                 :
                 <>
-                    <p style={{fontSize:'30px'}} className="numbersOnTheScreen">{props.screenResult}</p>
+                    <p style={{fontSize:'25px'}} className="numbersOnTheScreenText">{props.screenResult}</p>
                 </>
             }
     </>
