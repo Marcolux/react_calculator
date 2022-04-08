@@ -8,8 +8,11 @@ const GameOnScreen = ()=>{
 
     const {countState } = useContext(Context)
     const [count, setCount] = countState
+    
+    const {screenResultState } = useContext(Context)
+    const [screenResult, setScreenResult] = screenResultState
 
-    const [screenResult, setScreenResult] = useState(`That's a Big Number 🙃`)
+    
 
     return(
         <>

@@ -11,6 +11,7 @@ const Provider = ({children})=>{
     const [operator, setOperator] = useState("")
     const [finalCount,setFinalCount] = useState([])
     const [initialCondition, setInitialCondition] = useState(false)
+    const [screenResult, setScreenResult] = useState(`That's a Big Number 🙃`)
 
     const state = {
         shadeState:[shade, setShade],
@@ -19,8 +20,8 @@ const Provider = ({children})=>{
         firstNumberState:[firstNumber, setFirstNumber],
         operatorState:[operator, setOperator],
         finalCountState:[finalCount,setFinalCount],
-        initialConditionState:[initialCondition, setInitialCondition]
-
+        initialConditionState:[initialCondition, setInitialCondition],
+        screenResultState:[screenResult, setScreenResult]
     }
 
 

@@ -1,6 +1,10 @@
-import { useContext, useState, useEffect } from "react"
+import { useContext} from "react"
 import { Context } from "../Context/Context"
-const DisplayNumber =(props)=>{
+
+import DisplayNumberDot from "./DisplayNumberDot"
+
+
+const DisplayNumber =()=>{
 
 
     const { numberToAddState } = useContext(Context)
@@ -10,23 +14,9 @@ console.log("number to add",numberToAdd)
     return( 
         <>
             {numberToAdd?
-            <>
-                {numberToAdd==='.'?
-                    
-                        <p className="numbersOnTheScreen">0.</p>
-                        :
-                        <>
-                        {numberToAdd<9999999999?
-                        <p className="numbersOnTheScreen">{numberToAdd}</p>
-                        :
-                        <p style={{fontSize:'23px'}} className="numbersOnTheScreenText">{props.screenResult}</p>
-                        }
-                        </>
-                }
-                
-            </>
-            :
-            <p className="numbersOnTheScreen">{0}</p>
+                <DisplayNumberDot></DisplayNumberDot>
+                :
+                <p className="numbersOnTheScreen">{0}</p>
             }
         </>
         
