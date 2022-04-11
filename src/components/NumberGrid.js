@@ -45,7 +45,7 @@ const NumberGrid=()=>{
             setFinalCount([])
         }
         
-        console.log(firstNumber.indexOf('.'))
+        // console.log(firstNumber.indexOf('.'))
     }
    
     return(

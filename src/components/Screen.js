@@ -22,7 +22,7 @@ const Screen =()=>{
     const [initialCondition, setInitialCondition] = initialConditionState
 
     
-    console.log("count",count,"first number to add", numberToAdd)
+    // console.log("count",count,"first number to add", numberToAdd)
     
     
 

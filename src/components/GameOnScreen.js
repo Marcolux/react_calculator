@@ -12,13 +12,21 @@ const GameOnScreen = ()=>{
     const {screenResultState } = useContext(Context)
     const [screenResult, setScreenResult] = screenResultState
 
+    const { numberToAddState } = useContext(Context)
+    const [numberToAdd ,setNumberToAdd] = numberToAddState
     
 
     return(
         <>
         {
         count?
+            <>
+            {numberToAdd?
+            <DisplayNumber screenResult={screenResult}></DisplayNumber>
+            :
             <DisplayCount screenResult={screenResult}></DisplayCount>
+            }
+            </>
             :
             <DisplayNumber screenResult={screenResult}></DisplayNumber>
         }

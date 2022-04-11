@@ -32,7 +32,7 @@ return (
             setCount()
             setOperator('')
             setInitialCondition(false)
-            console.log(count)
+            // console.log(count)
            
             
             }} style={{color:`${shade}`}} className="SpecialControls">C</button>

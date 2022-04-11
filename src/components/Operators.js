@@ -28,6 +28,7 @@ const Operators = ()=>{
     
     const equalFunctionHelper =()=>{
         finalCount.length=0
+        // console.log(finalCount)
         setCount(results)
         setNumberToAdd()
         setOperator("")
@@ -55,19 +56,32 @@ const Operators = ()=>{
         operator===""?finalCount.length = 0:finalCount.push(results)
     }
     const operatorSelection= ()=>{
-            setCount()
+            // setCount()
             setFirstNumber([])
-            
-            if(finalCount.length<2 && numberToAdd){
+            if(numberToAdd){
+                finalCount.push(numberToAdd)}
+            if(numberToAdd&&!count){
+                setCount(numberToAdd)
                 setFinalCount([numberToAdd])
+            }
+            if(finalCount.length===2 && numberToAdd){
+                console.log("count",count)
+                equalFunction()
+                setCount()
+                setNumberToAdd(finalCount[0])
             }
             else if(finalCount.length<2&&count){
                 setFinalCount([count])
             }
+            else if(finalCount.length<2&&numberToAdd){
+                setFinalCount([numberToAdd])
+            }
             else if(operator===""){
                 finalCount.shift()
             }
-    }
+            
+        }
+        console.log(finalCount,finalCount.length)
 return(
     <div className="OperatorsContainer">
     {operators.map((operat,i)=>{

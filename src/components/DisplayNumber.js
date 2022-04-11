@@ -10,7 +10,7 @@ const DisplayNumber =()=>{
     const { numberToAddState } = useContext(Context)
     const [numberToAdd ,setNumberToAdd] = numberToAddState
 
-console.log("number to add",numberToAdd)
+// console.log("number to add",numberToAdd)
     return( 
         <>
             {numberToAdd?
