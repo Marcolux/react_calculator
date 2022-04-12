@@ -44,8 +44,8 @@ const NumberGrid=()=>{
             setCount()
             setFinalCount([])
         }
+        console.log(firstNumber[0])
         
-        // console.log(firstNumber.indexOf('.'))
     }
    
     return(
@@ -70,7 +70,9 @@ const NumberGrid=()=>{
                     <button
                     onClick={(e)=>{
                         createNumber(e)
-                        console.log(e)
+                        // console.log(e)
+                       
+                        
                     }}
                     style={{color:`${shade}`}}
                     className="NumberButton0">0</button>

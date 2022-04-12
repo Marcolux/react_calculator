@@ -28,8 +28,15 @@ const Operators = ()=>{
     
     const equalFunctionHelper =()=>{
         finalCount.length=0
-        // console.log(finalCount)
-        setCount(results)
+        console.log(results)
+        console.log(Array.from(String(results)).length)
+        if(Array.from(String(results)).length>10){
+            let newResults = Array.from(String(results))
+            newResults.length = 11
+            results = Number(newResults.join(''))
+            setCount(Number(results))
+        }else if(Array.from(String(results)).length<11)
+        {setCount(results)}
         setNumberToAdd()
         setOperator("")
         setFirstNumber([])
@@ -53,12 +60,13 @@ const Operators = ()=>{
             results = Number(finalCount[0])+Number(finalCount[1])
             equalFunctionHelper()
         }
+        
         operator===""?finalCount.length = 0:finalCount.push(results)
     }
     const operatorSelection= ()=>{
             // setCount()
             setFirstNumber([])
-            if(numberToAdd){
+            if(numberToAdd===firstNumber.join('')){
                 finalCount.push(numberToAdd)}
             if(numberToAdd&&!count){
                 setCount(numberToAdd)
@@ -67,20 +75,28 @@ const Operators = ()=>{
             if(finalCount.length===2 && numberToAdd){
                 console.log("count",count)
                 equalFunction()
-                setCount()
+                // setCount()
                 setNumberToAdd(finalCount[0])
             }
             else if(finalCount.length<2&&count){
+                if(Array.from(String(count)).length>10){
+                    let newArr = Array.from(String(count))
+                    newArr.length = 10
+                    console.log(Number(newArr))
+                    setCount(Number(newArr))
+                }
                 setFinalCount([count])
             }
             else if(finalCount.length<2&&numberToAdd){
                 setFinalCount([numberToAdd])
+                // setNumberToAdd(numberToAdd)
             }
             else if(operator===""){
                 finalCount.shift()
             }
+
             
-        }
+    } 
         console.log(finalCount,finalCount.length)
 return(
     <div className="OperatorsContainer">
